@@ -1,0 +1,44 @@
+# def find_symb_value_in_table(valueOrSymb):    #Função que recebe um token com seu lexema
+#     # if not valueOrSymb.isnumeric():
+#     valueOrSymb = valueOrSymb.upper()  # Usamos a função uppe() para padronizar todos as entradas de lexemes com letras maiúsculas
+
+
+#     for seachToken in token:  # Pegando todas as tags um por uma do módulo tag, para fazer as verificações
+#         # print(tags['lexeme'], valueOrSymb)
+#         token = '-'
+#         if valueOrSymb in tableSymb: # Na primeira parte antes do and verificamos se o lexeme recebido está dentro de alguma tag e se tiver verificamos se ele já foi adicionado anteriormente na tableTokens.
+#             token = seachToken.copy()
+#             break
+#             # return tableTokens.append(tags)  # Adicionado um a tag na tableTokens 
+#         elif valueOrSymb in symbs:
+#             token = {'tag': valueOrSymb}
+#             break
+#             # return symb.append({'tag': valueOrSymb})
+#         else:  # A tag 262 sever para adicionar os identificadores na lista tableSymb. Lembrando que no módulo tag à tag 264 recebe o parâmetro lexeme para formar seu token.
+#             token = tags
+#             break
+#             # return tableSymb.append(tags) 
+#     tokensInOrder.append(token)
+#     if  token not in tableSymb:
+#         tableSymb.append(token)
+
+# '''
+#     for x in tableSymb():
+#         if valueOrSymb in x["lexeme"]:
+#             token = tags.copy()
+#             break
+#     else:
+#         token = tags.copy()
+#         tableSymb.append(token)
+#         break
+#     tokensInOrder.append(token)
+
+# '''
+
+# teste = ['int', 'do', 'do', 'altura', '[',']', '=', '{','}']
+
+# for c in teste:
+#     find_symb_value_in_table(c)
+
+# [print(x) for x in tableSymb] # printando a tabela de simbolos
+# [print(x) for x in tokensInOrder] # printando a tabela de tokens

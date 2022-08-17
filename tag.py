@@ -1,30 +1,53 @@
-lexeme = ''
-
-tag = [
-    {'tag': 256, 'lexeme': 'AND'},
-
-    {'tag': 257, 'lexeme': 'BASIC'},               # ??? 
-    {'tag': 257, 'lexeme': 'INT', 'width': 4},     # int
-    {'tag': 257, 'lexeme': 'FLOAT', 'width': 8},   # float
-
-    {'tag': 258, 'lexeme': 'BREAK'},
-    {'tag': 259, 'lexeme': 'DO'},
-    {'tag': 260, 'lexeme': 'ELSE'},
-    {'tag': 261, 'lexeme': 'EQ'},  # ????
-    {'tag': 262, 'lexeme': 'FALSE'},
-    {'tag': 263, 'lexeme': 'GE'},  # ????
-    {'tag': 264, 'lexeme': f'{lexeme}'},
-    {'tag': 265, 'lexeme': 'IF'},
-    {'tag': 266, 'lexeme': 'INDEX'},
-    {'tag': 267, 'lexeme': 'LE'},  # ????
-    {'tag': 268, 'lexeme': 'MINUS'}, # ???
-    {'tag': 269, 'lexeme': 'NE'},
+# Tabela de tokens
+tokens = [
+    {'tag': 256, 'lexeme': 'and'},
+    {'tag': 257, 'lexeme': 'basic'},             
+    {'tag': 257, 'lexeme': 'int', 'width': 4},
+    {'tag': 257, 'lexeme': 'float', 'width': 8},
+    {'tag': 258, 'lexeme': 'break'},
+    {'tag': 259, 'lexeme': 'do'},
+    {'tag': 260, 'lexeme': 'else'},
+    {'tag': 261, 'lexeme': 'eq'},
+    {'tag': 262, 'lexeme': 'false'},
+    {'tag': 263, 'lexeme': 'ge'},
+    #{'tag': 264, 'lexeme': f'{valueOrSymb}'},
+    {'tag': 265, 'lexeme': 'if'},
+    {'tag': 266, 'lexeme': 'index'},
+    {'tag': 267, 'lexeme': 'le'},
+    {'tag': 268, 'lexeme': 'minus'},
+    {'tag': 269, 'lexeme': 'ne'},
     # {'tag': 270, 'value': f'{lexeme}'},
-    {'tag': 271, 'lexeme': 'OR'},
-    {'tag': 272, 'lexeme': 'REAL'},
-    {'tag': 273, 'lexeme': 'TEMP'},
-    {'tag': 274, 'lexeme': 'TRUE'},
-    {'tag': 275, 'lexeme': 'WHILE'}
+    {'tag': 271, 'lexeme': 'or'},
+    {'tag': 272, 'lexeme': 'real'},
+    {'tag': 273, 'lexeme': 'temp'},
+    {'tag': 274, 'lexeme': 'true'},
+    {'tag': 275, 'lexeme': 'while'},
 ]
 
-symbs = ['[',']', '=', '*', '{', '}']
+# Tabela de simbolos
+symbols = [
+    {'tag': '*'},
+    {'tag': '+'},
+    {'tag': '/'},
+    {'tag': '-'},
+    {'tag': '<'},
+    {'tag': '>'},
+    {'tag': '<='},
+    {'tag': '>='},
+    {'tag': '!='},
+    {'tag': '=='},
+    {'tag': '**'},
+    {'tag': '='},
+    {'tag': '!'},
+    {'tag': '%'},
+    {'tag': '&'},
+    {'tag': '('},
+    {'tag': ')'},
+    {'tag': '['},
+    {'tag': ']'},
+    {'tag': '{'},
+    {'tag': '}'},
+    {'tag': ';'},
+    {'tag': ':'}, 
+    {'tag': ','}
+]

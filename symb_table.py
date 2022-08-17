@@ -1,37 +1,55 @@
-from tag import tag, symbs  # Módulo para pegar todas as tags
+from tag import tokens, symbols
 
-tableSymb = [] # Tabela da símbolos para armazenar todos os identificadores do código. (Tudo que o programador tem liberade de mudar, recebe o nome de ID na tabela de símbolos).
+tokensInOrder = [] # Resultados dos tokens gerados pelo analisador léxico
 
-tableTokens = [] # Lista para fazer armazenamento do todos os tokens com seus respectivos dados
+identifierTable = [] # Lista para fazer armazenamento do todos os identificadores. Com seus respectivos dados ou não
 
-symb = []
+ #Função que recebe um valor e retorna em forma de token
+def find_symb_value_in_table(valueOrSymbol): 
+    for seachToken in tokens:  # Buscando um mach com token usando o parâmetro de entrada
+        if seachToken['lexeme'] == valueOrSymbol:
+            tokensInOrder.append(seachToken)
+            return None
 
-def find_symb_value_in_table(lexeme,valueOrSymb):    #Função que recebe um token com seu lexema
-    lexeme = lexeme.upper()  # Usamos a função uppe() para padronizar todos as entradas de lexemes com letras maiúsculas
+    # Condicional para receber valores inteiro/float
+    if isinstance(valueOrSymbol, int) or isinstance(valueOrSymbol, float):  # Usando a função isinstance() verifica se um objeto pertence à subclasse especificada
+        token = {'tag': 270, 'value': valueOrSymbol}  # Gerando o token da tag 270 que representa um valor int ou float
+        tokensInOrder.append(token)
+        return None
 
-    for tags in tag:  # Pegando todas as tags um por uma do módulo tag, para fazer as verificações
-        if tags['lexeme'] == lexeme and tags not in tableTokens: # Na primeira parte antes do and verificamos se o lexeme recebido está dentro de alguma tag e se tiver verificamos se ele já foi adicionado anteriormente na tableTokens.
-            return tableTokens.append(tags)  # Adicionado um a tag na tableTokens 
+    # Buscando um mach com token usando o parâmetro de entrada 
+    for seachSymbol in symbols:        
+        if seachSymbol['tag'] == valueOrSymbol:
+            tokensInOrder.append(seachSymbol)
+            return None
 
-        elif tags['tag'] == 264:  # A tag 262 sever para adicionar os identificadores na lista tableSymb. Lembrando que no módulo tag à tag 264 recebe o parâmetro lexeme para formar seu token.
-            return tableSymb.append(tags) 
-        elif valueOrSymb in symbs:
-            return symb.append({'tag': valueOrSymb})
-
-
-
-find_symb_value_in_table('int', None) #função teste passando a palavra reserveda INT
-find_symb_value_in_table('do', None)  # Testando com a palavra chave DO
-find_symb_value_in_table('do', None)  # Verficando se está adicinando arquivos duplicados
-find_symb_value_in_table('Altura', '')  # Adicionado uma variável para ser transformada em identificador
-find_symb_value_in_table('Altura', '')  # Adicionado uma variável para ser transformada em identificador
-find_symb_value_in_table('', '[')
-find_symb_value_in_table('', '=')
-find_symb_value_in_table('', '{')
+    # Gerando o token da tag 264 que representa qualquer parte do código que o nome pode ser alterado pelo programador    (Após ter passado por todos os condicionais acima só sobraram os identificadores)
+    token = {'tag': 264, 'lexeme': f'{valueOrSymbol}'} 
+    tokensInOrder.append(token)
+    identifierTable.append(token)
 
 
-[print(x) for x in tableSymb] # printando a tabela de simbolos
-print("-="*40)
-[print(x) for x in tableTokens] # printando a tabela de tokens
-print("-="*40)
-[print(x) for x in symb] # printando os symb
+
+'''
+    float altura = 1.75;
+    float peso = 80;
+    int idade;
+
+    imc = peso / (altura * altura)
+'''
+
+casoTesteLista = ['float','altura', '=', 1.75, ';', 'float', 'peso', '=', 80.0, ';', 'int', 'idade', 30, ';', 'imc', '=', 'peso', '/', '(', 'altura', '*', 'altura',')', ';']
+
+[find_symb_value_in_table(dados) for dados in casoTesteLista]
+
+print("-="*25)
+print("\tTOKENS EM ORDEM")
+print("-="*25)
+[print(tokens) for tokens in tokensInOrder]
+print(""*20)
+print('')
+print("-="*20)
+print('\tTABELA DE SÍMBOLOS')
+print("-="*20)
+[print(tokens) for tokens in identifierTable]
+print("-="*20)
