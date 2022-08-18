@@ -34,10 +34,6 @@ def find_symb_value_in_table(valueOrSymbol):
 
 
 
-
-
-
-
 '''
     float altura = 1.75;
     float peso = 80;
