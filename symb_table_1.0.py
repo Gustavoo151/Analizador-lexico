@@ -39,7 +39,6 @@ def tokensInteger(valueOrSymbol):
         return True
 
 
-#FUNÇÃO PRINCIPAL
 # Buscando um mach com token usando o parâmetro de entrada 
 def machToken(valueOrSymbol):
         for searchSymbol in symbols:        
@@ -48,7 +47,8 @@ def machToken(valueOrSymbol):
                 return True
 
 
- #Função que recebe um valor e retorna em forma de token
+#FUNÇÃO PRINCIPAL
+#Função que recebe um valor e retorna em forma de token
 def find_symb_value_in_table(valueOrSymbol): 
     
     if searchTokens(valueOrSymbol) == True:
