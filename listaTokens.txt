@@ -1,0 +1,89 @@
+{'tag': '{'}
+int
+{'tag': 264, 'lexeme': 'i'}
+{'tag': ';'}
+float
+{'tag': 264, 'lexeme': 'v'}
+float
+{'tag': 264, 'lexeme': 'x'}
+{'tag': ';'}
+float
+{'tag': '['}
+{'tag': 270, 'value': 100}
+{'tag': ']'}
+{'tag': 264, 'lexeme': 'a'}
+{'tag': ';'}
+while
+{'tag': '('}
+true
+{'tag': ')'}
+{'tag': '{'}
+do
+{'tag': 264, 'lexeme': 'i'}
+{'tag': '='}
+{'tag': 264, 'lexeme': 'i'}
+{'tag': '+'}
+{'tag': 270, 'value': 1}
+{'tag': ';'}
+while
+{'tag': '('}
+{'tag': 264, 'lexeme': 'a'}
+{'tag': '['}
+{'tag': 264, 'lexeme': 'i'}
+{'tag': ']'}
+{'tag': '<'}
+{'tag': 264, 'lexeme': 'v'}
+{'tag': ')'}
+{'tag': ';'}
+do
+{'tag': 264, 'lexeme': 'j'}
+{'tag': '='}
+{'tag': 264, 'lexeme': 'j'}
+{'tag': '-'}
+{'tag': 270, 'value': 1}
+{'tag': ';'}
+while
+{'tag': '('}
+{'tag': 264, 'lexeme': 'a'}
+{'tag': '['}
+{'tag': 264, 'lexeme': 'j'}
+{'tag': ']'}
+{'tag': '>'}
+{'tag': 264, 'lexeme': 'v'}
+{'tag': ')'}
+{'tag': ';'}
+if
+{'tag': '('}
+{'tag': 264, 'lexeme': 'i'}
+{'tag': '>'}
+{'tag': '='}
+{'tag': 264, 'lexeme': 'j'}
+{'tag': ')'}
+break
+{'tag': ';'}
+{'tag': 264, 'lexeme': 'x'}
+{'tag': '='}
+{'tag': 264, 'lexeme': 'a'}
+{'tag': '['}
+{'tag': 264, 'lexeme': 'i'}
+{'tag': ']'}
+{'tag': ';'}
+{'tag': 264, 'lexeme': 'a'}
+{'tag': '['}
+{'tag': 264, 'lexeme': 'i'}
+{'tag': ']'}
+{'tag': '='}
+{'tag': 264, 'lexeme': 'a'}
+{'tag': '['}
+{'tag': 264, 'lexeme': 'j'}
+{'tag': ']'}
+{'tag': ';'}
+{'tag': 264, 'lexeme': 'a'}
+{'tag': '['}
+{'tag': 264, 'lexeme': 'j'}
+{'tag': ']'}
+{'tag': '='}
+{'tag': 264, 'lexeme': 'x'}
+{'tag': ';'}
+{'tag': '}'}
+{'tag': '}'}
