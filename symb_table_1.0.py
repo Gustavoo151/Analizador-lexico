@@ -86,7 +86,7 @@ def find_symb_value_in_table(valueOrSymbol):
 # LISTA COM PALAVRA POR PALAVRA DO CÓDIGO
 casoTesteLista = ['{','int', 'i', ';', 'float', 'v', 'float', 'x', ';', 'float', '[', 100, ']', 'a', ';', 'while', '(', 'true', ')', '{', 'do', 'i', '=', 'i', '+', 1, ';', 'while', '(', 'a', '[', 'i', ']', '<', 'v', ')', ';', 'do', 'j', '=', 'j', '-', 1, ';', 'while', '(', 'a', '[', 'j', ']', '>', 'v', ')', ';', 'if', '(', 'i', '>', '=', 'j', ')', 'break', ';', 'x', '=', 'a', '[', 'i', ']', ';', 'a', '[', 'i', ']', '=', 'a', '[', 'j', ']', ';', 'a', '[', 'j', ']', '=', 'x', ';', '}','}']
 
-##############################################################################################
+##############################################################################################ALO
 
 # Usando List Comprehensions para passar valor por valor na função principal
 [find_symb_value_in_table(dados) for dados in casoTesteLista]
