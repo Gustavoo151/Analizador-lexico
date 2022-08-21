@@ -73,19 +73,18 @@ def find_symb_value_in_table(valueOrSymbol):
 
 ######################### CÓDIGO TESTE ####################################################
 '''
-    float altura = 1.75;
-    float peso = 80;
-    int idade = 30;
-    float imcNormal = 22.5;
-    float meuImc;
-    float imc;
-
-    imc = peso / (altura * altura)
-    if imcNormal == imc;
-        meuImc = imc;
+{
+	int i; int j; float v; float x; float[100] a;
+	while( true ) {
+		do i = i + 1; while( a[i] < v);
+		do j = j - 1; while( a[j] > v);
+		if ( i >= j) break;
+		x = a[i]; a[i] = a[j]; a[j] = x;
+	}
+}
 '''
 # LISTA COM PALAVRA POR PALAVRA DO CÓDIGO
-casoTesteLista = ['float','altura', '=', 1.75, ';', 'float', 'peso', '=', 80.0, ';', 'int', 'idade', 30, ';', 'float', 'imcNormal', '=', 22.5, ';', 'float', 'meuImc', ';', 'float', 'imc', ';', 'imc', '=', 'peso', '/', '(', 'altura', '*', 'altura', ')', ';', 'if', 'imcNormal', '==', 'imc', ';', 'meuImc', '=', 'imc', ';',]
+casoTesteLista = ['{','int', 'i', ';', 'float', 'v', 'float', 'x', ';', 'float', '[', 100, ']', 'a', ';', 'while', '(', 'true', ')', '{', 'do', 'i', '=', 'i', '+', 1, ';', 'while', '(', 'a', '[', 'i', ']', '<', 'v', ')', ';', 'do', 'j', '=', 'j', '-', 1, ';', 'while', '(', 'a', '[', 'j', ']', '>', 'v', ')', ';', 'if', '(', 'i', '>', '=', 'j', ')', 'break', ';', 'x', '=', 'a', '[', 'i', ']', ';', 'a', '[', 'i', ']', '=', 'a', '[', 'j', ']', ';', 'a', '[', 'j', ']', '=', 'x', ';', '}','}']
 
 ##############################################################################################
 
@@ -96,7 +95,7 @@ print("-="*25)
 print("\tTOKENS EM ORDEM")
 print("-="*25)
 # Usando List Comprehensions para printar os tokens em ordem
-[print(tokens) for tokens in tokensInOrder]
+[print(f'Token: {tokens}') for tokens in tokensInOrder]
 print(""*20)
 print('')
 print("-="*20)
